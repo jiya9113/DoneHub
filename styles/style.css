@@ -1,0 +1,465 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(252, 209, 209,0.5);
+    height: 50px;
+}
+
+a{
+    color: none;
+    text-decoration: none;
+}
+
+.navbar div{
+    color: #61C0BF;
+    margin: 0px 10px;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#time{
+    font-size: 2rem;
+    height: 40px;
+}
+
+.bars{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar a{
+        display: none;
+    }
+    .bars{
+        display: block;
+        cursor: pointer;
+    }
+
+    .center{
+        display: block;
+    }
+
+    .responsive{
+        display: block;
+        height: auto;
+        /* position: relative; */
+    }
+
+    .responsive div{
+        text-align: right;
+        padding: 5px 0px;
+    }
+
+    #log-in{
+        padding: 10px;
+    }
+
+    #time{
+        text-align: left;
+    }
+
+    .responsive .bars {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+    .responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+/* home */
+.land{
+    background-color: rgba(236, 226, 225,0.5);
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.image{
+    height: 90%;
+    width: 60%;
+    margin-right: 20px;
+}
+
+.head-img{
+    background-image: url(../images/home-pic.png);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.text{
+    color: #61C0BF;
+    width: 30%;
+    padding-left: 5%;
+}
+
+.heading{
+    font-size: 4.5rem;
+    display: inline;
+}
+
+.star{
+    display: inline;
+    font-size: 2rem;
+}
+
+.des{
+    margin-top: 30px;
+}
+
+.start-btn{
+    background-color: #FCD1D1;
+    width: 150px;
+    height: 25px;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 5%;
+    color: #61C0BF;
+    border: 1px solid #61C0BF;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 600px){
+    .image{
+        width: 100%;
+        height: 40%;
+    }
+
+    .head-img{
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .land{
+        display: block;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+
+    .text{
+        width: 80%;
+    }
+}
+
+/* adding task */
+.specify{
+    background-color: rgba(211, 224, 220,0.5);
+    padding: 20px;
+}
+
+.adding{
+    text-align: center;
+    color: #b68b8b;
+    font-size: 3rem;
+}
+
+table{
+    margin-top: 20px;
+    height: 250px;
+    width: 70%;
+}
+
+td{
+    padding-left: 20%;
+    padding-top: 15px;
+}
+
+table label{
+    font-size: 1.5rem;
+    color: #b68b8b;
+}
+
+table input{
+    height: 30px;
+    width: 100%;
+    padding-left: 5%;
+    border: none;
+}
+
+table select{
+    height: 30px;
+    width: 100%;
+    padding-left: 5%;
+    background-color: white;
+    border: none;
+}
+
+table textarea{
+    width: 100%;
+    padding-left: 5%;
+    border: none;
+}
+
+.a-btn{
+    display: flex;
+    justify-content: center;
+}
+
+.a-btn button{
+    background-color: #b68b8b;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 5%;
+    color: #2a6160;
+    border: 1px solid #61C0BF;
+    margin-top: 30px;
+}
+
+@media screen and (max-width:600px) {
+    .specify label{
+        font-size: 1rem;
+    }
+    td{
+        padding: 5px ;
+    }
+}
+
+/* search */
+.search{
+    background-color: rgba(211, 224, 220,0.5);
+    padding: 20px;
+}
+
+.search-heading{
+    text-align: center;
+    color: #b68b8b;
+    font-size: 3rem;
+}
+
+.s{
+    display: flex;
+    justify-content: center;
+    padding: 4%;
+}
+
+.s input{
+    height: 30px;
+    width: 30%;
+    border: none;
+    padding-left: 1%;
+}
+
+/* your-tasks */
+#taskList{
+    background-color: rgba(236, 226, 225,0.5);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
+
+@keyframes fade-out {
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
+
+#taskList div{
+    height: 300px;
+    width: 200px;
+    background-color: rgba(250, 249, 206,0.4);
+    margin: 20px;
+    border-radius: 5%;
+    color: #b68b8b;
+    position: relative;
+}
+
+.fade-in{
+    animation: fade-in ease 1s 1 forwards;
+}
+
+.fade-out{
+    animation: fade-out 1s ease;
+}
+
+.task-name{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 550;
+    padding: 10px 0px;
+}
+
+.due-date{
+    padding: 10px;
+}
+
+.category{
+    padding: 0px 10px;
+}
+
+.description{
+    padding: 10px;
+    overflow: auto;
+    height: 50px;
+    scrollbar-width: thin;
+    scrollbar-color: #b68b8b rgba(250, 249, 206,0.4);
+}
+
+.complete {
+    text-decoration: line-through;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+
+}
+
+.completebtn {
+    background-color: rgba(236, 226, 225,0.7);
+    border: none;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #b68b8b;
+    color: #b68b8b;
+    margin: 20px;
+    position: absolute;
+    bottom: 10px;
+}
+
+.completebtn:hover {
+    background-color: rgb(236, 226, 225);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.deletebtn{
+    font-size: 1.5rem;
+    color: #b68b8b;
+    background-color: transparent;
+    margin-left: 140px;
+    position: absolute;
+    bottom: 80px;
+}
+
+.editbtn{
+    font-size: 1.5rem;
+    color: #b68b8b;
+    background-color: transparent;
+    margin-left: 30px;
+    position: absolute;
+    bottom: 80px;
+}
+
+/* log-in */
+#log-in{
+    cursor: pointer;
+}
+
+.log-back {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+  }
+
+  .log-block {
+    background-color: rgb(252, 209, 209);
+    margin: 5% auto 15% auto;
+    border: 1px solid #61C0BF;
+    width: 50%;
+    color: #2a6160;
+    padding: 20px;
+  }
+
+  .close {
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+
+  .zoom {
+    animation: animatezoom 0.6s
+  }
+
+  .log-inp{
+    width: 80%;
+    padding: 12px 20px;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    margin-top: 5px;
+    margin-left: 10%;
+  }
+
+  .log-label{
+    margin-left: 10%;
+  }
+
+  .log-btn{
+    background-color: rgb(42, 97, 96);
+    color: #b68b8b;
+    border: 1px solid #b68b8b;
+    height: 30px;
+    width: 70px;
+    margin-left: 10%;
+  }
+    
+  @keyframes animatezoom {
+    0%{
+        transform: scale(0)
+    } 
+    100%{
+        transform: scale(1)
+    }
+  }
+
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
