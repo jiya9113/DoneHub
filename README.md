@@ -26,7 +26,7 @@ To use this Task Manager Frontend Project, you need a modern web browser that su
 
 3. Open the `index.html` file in your web browser to start using the Task Manager.
 
-Project Structure
+## Project Structure
 The project structure is as follows:
 
 ```
