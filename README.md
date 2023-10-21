@@ -9,7 +9,7 @@ Welcome to the Task Manager frontend project! This project is designed to help y
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
-- [License](#licence)
+- [License](#license)
 
 ## Getting Started
 
