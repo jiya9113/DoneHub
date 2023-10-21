@@ -7,7 +7,7 @@ Welcome to the Task Manager frontend project! This project is designed to help y
 - [Project Structure](#project-structure)
 - [Usage](#usage)
 - [Features](#features)
-- [Technologies Used](#technoligies-used)
+- [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 - [License](#licence)
 
