@@ -39,6 +39,7 @@ a{
     display: none;
 }
 
+/* responsive navbar */
 @media screen and (max-width: 600px) {
     .navbar a{
         display: none;
@@ -83,7 +84,7 @@ a{
     }
 }
 
-/* home */
+/* landing page */
 .land{
     background-color: rgba(236, 226, 225,0.5);
     height: 600px;
@@ -137,6 +138,7 @@ a{
     margin-top: 30px;
 }
 
+/* responsive landing page */
 @media screen and (max-width: 600px){
     .image{
         width: 100%;
@@ -227,6 +229,7 @@ table textarea{
     margin-top: 30px;
 }
 
+/* responsive adding task */
 @media screen and (max-width:600px) {
     .specify label{
         font-size: 1rem;
@@ -236,7 +239,7 @@ table textarea{
     }
 }
 
-/* search */
+/* search task*/
 .search{
     background-color: rgba(211, 224, 220,0.5);
     padding: 20px;
@@ -261,7 +264,7 @@ table textarea{
     padding-left: 1%;
 }
 
-/* your-tasks */
+/* list of tasks */
 #taskList{
     background-color: rgba(236, 226, 225,0.5);
     display: flex;
@@ -270,24 +273,6 @@ table textarea{
     justify-content: space-evenly;
     padding-top: 30px;
     padding-bottom: 30px;
-}
-
-@keyframes fade-in {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 100;
-    }
-}
-
-@keyframes fade-out {
-    0%{
-        opacity: 100%;
-    }
-    100%{
-        opacity: 0%;
-    }
 }
 
 #taskList div{
@@ -377,6 +362,25 @@ button {
     bottom: 80px;
 }
 
+/* animation for task cards */
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
+
+@keyframes fade-out {
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
+
 /* log-in */
 #log-in{
     cursor: pointer;
@@ -393,35 +397,34 @@ button {
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
     padding-top: 60px;
-  }
+}
 
-  .log-block {
+.log-block {
     background-color: rgb(252, 209, 209);
     margin: 5% auto 15% auto;
     border: 1px solid #61C0BF;
     width: 50%;
     color: #2a6160;
     padding: 20px;
-  }
+}
 
-  .close {
+.close {
     color: #000;
     font-size: 35px;
     font-weight: bold;
     padding: 10px;
-  }
+}
   
-  .close:hover,
-  .close:focus {
+.close:hover,.close:focus {
     color: red;
     cursor: pointer;
-  }
+}
 
-  .zoom {
+.zoom {
     animation: animatezoom 0.6s
-  }
+}
 
-  .log-inp{
+.log-inp{
     width: 80%;
     padding: 12px 20px;
     display: block;
@@ -430,31 +433,23 @@ button {
     margin-bottom: 30px;
     margin-top: 5px;
     margin-left: 10%;
-  }
+}
 
-  .log-label{
+.log-label{
     margin-left: 10%;
-  }
+}
 
-  .log-btn{
+.log-btn{
     background-color: rgb(42, 97, 96);
     color: #b68b8b;
     border: 1px solid #b68b8b;
     height: 30px;
     width: 70px;
     margin-left: 10%;
-  }
-    
-  @keyframes animatezoom {
-    0%{
-        transform: scale(0)
-    } 
-    100%{
-        transform: scale(1)
-    }
-  }
+}
 
-  @media screen and (max-width: 300px) {
+/* responsive log-in */
+@media screen and (max-width: 300px) {
     span.psw {
        display: block;
        float: none;
@@ -462,4 +457,14 @@ button {
     .cancelbtn {
        width: 100%;
     }
-  }
+}
+
+/* animation for log-in pop-up */
+@keyframes animatezoom {
+    0%{
+        transform: scale(0)
+    } 
+    100%{
+        transform: scale(1)
+    }
+}
