@@ -12,13 +12,20 @@ const uname = document.getElementById('uname');
 const psw = document.getElementById('psw');
 const bars = document.getElementById('bars');
 
+//storing tasks
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+//storing user-name
 let userInfo = localStorage.getItem('user');
 
+
+//saving tasks
 function saveTasks() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
+
+//rendering task list
 function renderTasks(filteredTasks = tasks) {
     taskList.innerHTML = '';
     filteredTasks.forEach((task, index) => {
@@ -33,9 +40,6 @@ function renderTasks(filteredTasks = tasks) {
           <br/>
           <button class="completebtn">${task.completed ? 'Mark as Incomplete <i class="fa-solid fa-circle-xmark fa-xl"></i>' : ' Mark as Completed <i class="fa-solid fa-square-check fa-xl"></i>'}</button>`;
 
-        // if (task.completed) {
-        //     li.classList.add('complete');
-        // }
         div.classList.add('fade-in')
         
         const editBtn = div.querySelector('.editbtn');
@@ -48,6 +52,13 @@ function renderTasks(filteredTasks = tasks) {
     });
 }
 
+//sort tasks
+function sortTasksByDueDate() {
+    tasks.sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate));
+    saveTasks();
+}
+
+//adding a task
 function addTask() {
     const taskName = taskInput.value.trim();
     const dueDate = dueDateInput.value;
@@ -67,14 +78,8 @@ function addTask() {
     taskDescription.value ='';
 }
 
-
+//edit a task
 function editTask(index) {
-    // const newTaskName = prompt('Edit task:', tasks[index].name);
-    // if (newTaskName !== null) {
-    //     tasks[index].name = newTaskName;
-    //     saveTasks();
-    //     renderTasks();
-    // }
     taskInput.value=tasks[index].name;
     dueDateInput.value=tasks[index].dueDate;
     categorySelect.value=tasks[index].category;
@@ -82,6 +87,7 @@ function editTask(index) {
     deleteTask(index);
 }
 
+//delete a task
 function deleteTask(index) {
     const DivToDelete = taskList.children[index];
     DivToDelete.classList.remove('fade-in');
@@ -91,29 +97,26 @@ function deleteTask(index) {
         saveTasks();
         renderTasks();
     });
-    // tasks.splice(index, 1);
-    // saveTasks();
-    // renderTasks();
 }
 
+// mark task as complete or incomplete
 function toggleComplete(index) {
     tasks[index].completed = !tasks[index].completed;
     saveTasks();
     renderTasks();
 }
 
+//search a task
 function searchTasks() {
     const searchText = searchInput.value.toLowerCase();
     const filteredTasks = tasks.filter(task => task.name.toLowerCase().includes(searchText));
     renderTasks(filteredTasks);
 }
 
-function sortTasksByDueDate() {
-    tasks.sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate));
-    saveTasks();
-}
-
+//add task button
 addTaskBtn.addEventListener('click', addTask);
+
+//search task input
 searchInput.addEventListener('input', searchTasks);
 
 renderTasks();
@@ -154,6 +157,7 @@ function displayUser(){
     }
 }
 
+//responsive log-in
 bars.addEventListener('click',()=>{
     var x = document.getElementById("navbar");
   if (x.className === "navbar") {
@@ -164,5 +168,7 @@ bars.addEventListener('click',()=>{
 })
 
 displayUser();
+
+//update time every second
 updateTime();
 setInterval(updateTime, 1000);
