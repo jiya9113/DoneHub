@@ -35,6 +35,7 @@ The project structure is as follows:
 TaskManager/
 │   README.md                # Read me file
 │   LICENSE                  # Licence file
+|   index.html               # The main HTML file
 │
 ├── images/
 │   │   home-pic.png         # Image used
@@ -44,9 +45,6 @@ TaskManager/
 │
 ├── styles/
 │   │   style.css          # The CSS file for styling
-│
-├── views/
-│   │   index.html          # The main HTML file
 ```
 
 ## Usage
