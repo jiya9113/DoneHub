@@ -2,7 +2,7 @@
 
 Welcome to the Done Hub frontend project! This project is designed to help you manage your tasks efficiently. With this application, users can add, delete, edit, mark tasks as completed or incomplete, and even search for specific tasks. The task list is displayed in sorted order by date, making it easy to prioritize your tasks.
 
-[visit the live website here](https://jiya9113.github.io/TaskManager/)
+[visit the live website here](https://jiya9113.github.io/DoneHub/)
 
 ## Table of Contents
 - [Getting Started](#getting-started)
