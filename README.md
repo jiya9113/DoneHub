@@ -1,6 +1,6 @@
-# TaskManager
+# Done Hub
 
-Welcome to the Task Manager frontend project! This project is designed to help you manage your tasks efficiently. With this application, users can add, delete, edit, mark tasks as completed or incomplete, and even search for specific tasks. The task list is displayed in sorted order by date, making it easy to prioritize your tasks.
+Welcome to the Done Hub frontend project! This project is designed to help you manage your tasks efficiently. With this application, users can add, delete, edit, mark tasks as completed or incomplete, and even search for specific tasks. The task list is displayed in sorted order by date, making it easy to prioritize your tasks.
 
 [visit the live website here](https://jiya9113.github.io/TaskManager/)
 
@@ -21,7 +21,7 @@ To use this Task Manager Frontend Project, you need a modern web browser that su
 ### Installation
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/jiya9113/TaskManager.git
+   git clone https://github.com/jiya9113/DoneHub.git
    ```
 
 2. Open the project folder in your preferred text editor or integrated development environment (IDE).
